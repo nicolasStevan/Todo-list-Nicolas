@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #5566c4;
+}
+
+.title{
+    font-size: 40px;
+    font-weight: 600;
+    margin: 20px 0;
+    font-family: 'Bruno Ace SC', cursive;
+}
+
+.todo-list{
+    border: 1px black solid;
+    width: 500px;
+    margin: 340px auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    box-shadow:  0 0 10px 0 rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+
+.form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.inputForm{
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+.inputForm:focus{
+    border: 1px solid #000;
+}
+
+.formButton{
+    width: 15%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.list{
+    list-style: none;
+    margin-top: 20px;
+}
+
+.task{
+   display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.task .conteudo{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Bruno Ace SC', cursive;
+}
