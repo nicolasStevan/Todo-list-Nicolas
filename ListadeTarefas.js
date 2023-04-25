@@ -8,8 +8,17 @@ const criarTarefa = (evento) => {
     const taskLi = document.createElement('li'); //criando elemento li
     taskLi.classList.add('task'); //adicionando classe ao elemento li
 
-    const content = `<p class="content">${valueInput}</p>`
-
+    const content =
+        `
+        <p class="content">${valueInput}</p>
+        <button onclick='deleteTask(${JSON.stringify(valueInput)})'>
+            <img width="20px" src="/assets/trash.png" />
+        </button>
+    `
+    if (dataList.innerHTML.includes(inputForm.value)) {
+        return alert("Tarefa já existe!")
+    }
+    
     taskLi.innerHTML = content; //inserindo o conteudo dentro da li
 
     dataList.appendChild(taskLi); //inserindo a li dentro da ul, AppendChild adiciona um filho ao elemento
@@ -35,4 +44,15 @@ const botaoConclui = () =>{
 
     buttonConclui.classList.add('check-button');
 
+}
+
+const deleteTask = (item) => {
+
+    const data = document.getElementsByClassName('content');
+    for (itemIterator = 0; itemIterator <= data.length; itemIterator++) {
+        if (item == data[itemIterator]?.innerHTML) {
+            let element = data[itemIterator]
+            element.parentNode.style.display = 'none'
+        }
+    }
 }
