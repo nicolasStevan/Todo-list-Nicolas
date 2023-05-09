@@ -59,7 +59,7 @@ body{
 }
 
 .task{
-   display: flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
@@ -73,4 +73,12 @@ body{
     font-size: 20px;
     font-weight: 600;
     font-family: 'Bruno Ace SC', cursive;
+}
+
+.check-button{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid black;
 }

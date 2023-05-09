@@ -5,6 +5,7 @@ const criarTarefa = (evento) => {
     const inputForm = document.querySelector('[data-form-input]');
     const valueInput = inputForm.value;
     
+    
     const taskLi = document.createElement('li'); //criando elemento li
     taskLi.classList.add('task'); //adicionando classe ao elemento li
 
@@ -13,10 +14,18 @@ const criarTarefa = (evento) => {
     taskLi.innerHTML = content; //inserindo o conteudo dentro da li
 
     dataList.appendChild(taskLi); //inserindo a li dentro da ul, AppendChild adiciona um filho ao elemento
+    
+    const checkInput = document.createElement('div'); //criando elemento div
+    checkInput.classList.add('check') //adicionando classe ao elemento div
+    
+    
+    const checkContent = `<input type="checkbox" class="check-button">`
+    
+    taskLi.appendChild(checkInput)
+    
+    checkInput.innerHTML = checkContent;
 
     inputForm.value = ""
-
-    
 }
 
 
