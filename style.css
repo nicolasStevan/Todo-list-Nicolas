@@ -15,6 +15,14 @@ body{
     font-family: 'Bruno Ace SC', cursive;
 }
 
+.secondName{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px 0;
+    font-family: 'Bruno Ace SC', cursive;
+    color: #0c8caf;
+}
+
 .todo-list{
     border: 1px black solid;
     width: 500px;
@@ -67,6 +75,7 @@ body{
     border: 1px solid black;
     border-radius: 5px;
     background-color: #fff;
+    flex-direction: row-reverse;
 }
 
 .task .conteudo{
@@ -75,10 +84,39 @@ body{
     font-family: 'Bruno Ace SC', cursive;
 }
 
-.check-button{
+.list .task .check{
     cursor: pointer;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
+    width: 20px;
+    height: 20px;
     border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.list .task .check:hover{
+    background-color: #12271b;
+}
+
+.list .task .check.active{
+    box-sizing: border-box;
+    background-color: #07e66b;
+    border-radius: 3px;
+    display: block;
+}
+
+.line-through{
+    text-decoration: line-through;
+}
+
+.list .task .content{
+    margin-left: 30px;
+    font-family: 'Bruno Ace SC', cursive;
+}
+
+.pAndDiv{
+    display: flex;
+    align-items: center;
 }

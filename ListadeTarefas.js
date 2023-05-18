@@ -11,10 +11,13 @@ const criarTarefa = (evento) => {
 
     const content =
         `
-        <p class="content">${valueInput}</p>
         <button onclick='deleteTask(${JSON.stringify(valueInput)})'>
-            <img width="20px" src="/assets/trash.png" />
+        <img width="20px" src="/assets/trash.png" />
         </button>
+        <div class="pAndDiv">
+        <div class="check"></div>
+        <p class="content">${valueInput}</p>
+        </div>
     `
     if (dataList.innerHTML.includes(inputForm.value)) {
         return alert("Tarefa já existe!")
@@ -24,18 +27,22 @@ const criarTarefa = (evento) => {
 
     dataList.appendChild(taskLi); //inserindo a li dentro da ul, AppendChild adiciona um filho ao elemento
     
-    const checkInput = document.createElement('div'); //criando elemento div
-    checkInput.classList.add('check') //adicionando classe ao elemento div
+    // const checkInput = document.createElement('div'); //criando elemento div
+    // checkInput.classList.add('check') //adicionando classe ao elemento div
     
-    
-    const checkContent = `<input type="checkbox" class="check-button">`
-    
-    taskLi.appendChild(checkInput)
-    
-    checkInput.innerHTML = checkContent;
+    // taskLi.appendChild(checkInput); //inserindo a div dentro da li
 
+    const checkInput = document.querySelector('.check');
+    const contentLine = document.querySelector('.content');
+    checkInput.addEventListener('click', (e) => {
+        console.log(e)
+        checkInput.classList.toggle('active')
+        contentLine.classList.toggle('line-through')
+    })
+  
     inputForm.value = ""
 }
+
 
 
 const novaTarefa = document.querySelector('[data-form-button]');
@@ -50,8 +57,6 @@ const botaoConclui = () =>{
     buttonConclui.addEventListener('click', () => {
        
     })
-
-    buttonConclui.classList.add('check-button');
 
 }
 
