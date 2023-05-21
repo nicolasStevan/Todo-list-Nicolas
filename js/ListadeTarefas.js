@@ -32,9 +32,12 @@ const criarTarefa = (evento) => {
     
     // taskLi.appendChild(checkInput); //inserindo a div dentro da li
 
-    const checkInput = document.querySelector('.check');
     const contentLine = document.querySelector('.content');
-    checkInput.addEventListener('click', (e) => {
+    
+    const checkInput = document.querySelector('.check');
+
+    checkInput.addEventListener('click', (e) => {  
+
         console.log(e)
         checkInput.classList.toggle('active')
         contentLine.classList.toggle('line-through')

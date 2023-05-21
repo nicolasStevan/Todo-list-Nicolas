@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To do List</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <script defer src="ListadeTarefas.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,13 +19,34 @@
         </h1>
         <hr>
         <form class="form" action="">
-            <input class="inputForm" type="text" data-form-input>
+            <input placeholder="Digite Sua Tarefa" class="inputForm" type="text" data-form-input>
             <button class="formButton" type="submit" data-form-button>ENVIAR</button>
         </form>
 
+        <section class="wrapper-list">
         <ul class="list" data-list>
+        <li>
+            <div class="check"></div>
+            <label class="task">Tarefa 1
+            </label>
+            <button class="remove"><img width="30px" height="30px" src="assets/trash.png" alt=""></button>
+        </li>
+        <li>
+            <div class="check"></div>
+            <label class="task">Tarefa 2
+            </label>
+            <button class="remove"><img width="30px" height="30px" src="assets/trash.png" alt=""></button>
+        </li>
+        <li>
+            <div class="check"></div>
+            <label class="task">Tarefa 3
+            </label>
+            <button class="remove"><img width="30px" height="30px" src="assets/trash.png" alt=""></button>
+        </li>
+        </div>
         </ul>
+    </section>
     </div>
-
+<script src="main.js"></script>
 </body>
 </html>
