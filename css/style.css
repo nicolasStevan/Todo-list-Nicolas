@@ -19,13 +19,7 @@ body{
     font-family: 'Bruno Ace SC', cursive;
 }
 
-.secondName{
-    font-size: 20px;
-    font-weight: 600;
-    margin: 20px 0;
-    font-family: 'Bruno Ace SC', cursive;
-    color: #0c8caf;
-}
+
 
 .todo-list{
     width: 100%;
@@ -97,7 +91,6 @@ body{
 }
 
 
-
 .inputForm{
     margin: 10px 0 10px 0;
     width: 100%;
@@ -142,12 +135,26 @@ body{
     border-radius: 50%;
 }
 
-.removed{
+/* .removed{
     transform: translateX(100%);
     opacity: 0;
     transition: all 0.4s ease-in-out;
+} */
+
+.wrapper-list ul.list li.removed{
+    animation: colapseItens 300ms ease;
 }
 
 .wrapper-list ul.list li.hidden{
     display: none;
+}
+
+@keyframes colapseItens{
+    0%{
+        transform: rotateX(0deg);
+    }
+
+    100%{
+        transform: rotateX(-90deg);
+    }
 }

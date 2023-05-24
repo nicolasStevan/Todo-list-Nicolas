@@ -62,10 +62,13 @@ const Main = {
         }
      },
      $removeButtons_click: function(e){  // revisar pq ta com bug (botão de remover não funciona)
-        let li = e.target.parentElement
+        let buttonImg = e.target.parentElement.parentElement
+        buttonImg.classList.add('removed') 
 
-        li.classList.add('removed')  
-     }
+       setTimeout(function(){
+        buttonImg.classList.add('hidden')
+        }, 300)
+    }
     }
 }
 
